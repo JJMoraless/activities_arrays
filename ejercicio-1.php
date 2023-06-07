@@ -222,6 +222,30 @@ function ejercicio11()
 
 
 
+/* -------------------------------------------------------------------------- */
+/*                                ejercicios 12                                */
+/* -------------------------------------------------------------------------- */
+
+
+function ejercicio12()
+{
+    $planets_satelite = [
+        "tierra" => [],
+        "saturno" => [],
+        "marte" => []
+    ];
+
+    if (isset($_POST["activity11-planet"]) &&  isset($_POST["activity11-satelite"]) ) {
+        array_push( $planets_satelite[$_POST["activity11-planet"]] = $_POST["activity11-satelite"] );
+        print_array($planets_satelite);
+        return;
+    }
+
+    print_array($planets_satelite);
+}
+
+
+
 
 
 
@@ -441,23 +465,30 @@ function ejercicio11()
             </form>
         </article>
 
-           <!-- ejecicio 12-->
-
-         <article>
+        <!-- ejecicio 12-->
+        <article>
             <form method="POST">
                 <div class="grid">
-                    <label for="activity11">
-                        planetas unicos en sisemas solares
-                        <input type="submit" id="activity11" name="activity11" value="bsucar comunes" required>
+                    <label for="activity11-planet">
+                        planeta
+                        <select name="pets" id="pet-select">
+                            <option value="tierra">tierra</option>
+                            <option value="saturno">saturno</option>
+                            <option value="marte">marte</option>
+                        </select>
+                    </label>
+                    <label for="activity11-satelite">
+                        satelite
+                        <input id="activity12" name="activity12"required>
                     </label>
                 </div>
-               
-                <small>   <?php  ejercicio11(); ?>   </small>
+                <button  type="submit" > agregar satelite </button>   
+                <small>   <?php  ejercicio12(); ?>   </small>
             </form>
         </article>
 
 
-        
+
     </body>
 </body>
 
