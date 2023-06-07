@@ -174,6 +174,33 @@ function ejercicio9()
 
 
 
+/* -------------------------------------------------------------------------- */
+/*                                ejercicios 10                                */
+/* -------------------------------------------------------------------------- */
+
+
+function ejercicio10()
+{
+    $sistemaSolar1 = ['Mercurio', 'Venus', 'Tierra', 'Marte', 'Júpiter'];
+    $sistemaSolar2 = ['Venus', 'Tierra', 'Marte', 'Saturno', 'Urano'];
+
+    if (isset($_POST["activity10"])) {
+        $planetasComunes = array_intersect($sistemaSolar1, $sistemaSolar2);
+        print_array($planetasComunes);
+        return;
+    }
+
+    print_array($sistemaSolar1);
+    echo "<br/>";
+    print_array($sistemaSolar2);
+
+}
+
+
+
+
+
+
 
 ?>
 
@@ -349,37 +376,32 @@ function ejercicio9()
          <article>
             <form method="POST">
                 <div class="grid">
-                    <label for="activity9">
-                        asesina a los alienigenas duplciados
-                        <input type="submit" id="activity9" name="activity9" value="elimnar" required>
+                    <label for="activity10">
+                        planetas comunes en sisemas solares
+                        <input type="submit" id="activity10" name="activity10" value="bsucar comunes" required>
                     </label>
                 </div>
                
-                <small>   <?php  ejercicio9(); ?>   </small>
+                <small>   <?php  ejercicio10(); ?>   </small>
             </form>
         </article>
 
 
+           <!-- ejecicio 10-->
 
-
-
-
-
-
-
-
-        
-
-
-
-        
-
-
+           <article>
+            <form method="POST">
+                <div class="grid">
+                    <label for="activity10">
+                        planetas comunes en sisemas solares
+                        <input type="submit" id="activity10" name="activity10" value="bsucar comunes" required>
+                    </label>
+                </div>
+               
+                <small>   <?php  ejercicio10(); ?>   </small>
+            </form>
+        </article>
     </body>
-
-
-
-
 </body>
 
 </html>
