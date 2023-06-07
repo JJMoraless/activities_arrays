@@ -235,15 +235,31 @@ function ejercicio12()
         "marte" => []
     ];
 
-    if (isset($_POST["activity11-planet"]) &&  isset($_POST["activity11-satelite"]) ) {
-        array_push( $planets_satelite[$_POST["activity11-planet"]] = $_POST["activity11-satelite"] );
-        print_array($planets_satelite);
+    if (isset($_POST["activity12-planet"]) &&  isset($_POST["activity12-satelite"]) ) {
+        array_push( $planets_satelite[$_POST["activity12-planet"]], $_POST["activity12-satelite"] );
+        print_r($planets_satelite);
         return;
     }
-
-    print_array($planets_satelite);
+    print_r($planets_satelite);
 }
 
+
+
+/* -------------------------------------------------------------------------- */
+/*                                ejercicios 13                                */
+/* -------------------------------------------------------------------------- */
+
+
+function ejercicio13()
+{
+    $sistemaSolar1 = ['Mercurio', 'Venus', 'Tierra', 'Marte', 'Júpiter'];
+    if (isset($_POST["activity13"])) {
+        $sistema_revertido = array_reverse($sistemaSolar1);
+        print_array($sistema_revertido);
+        return;
+    }
+    print_array($sistemaSolar1);
+}
 
 
 
@@ -469,23 +485,45 @@ function ejercicio12()
         <article>
             <form method="POST">
                 <div class="grid">
-                    <label for="activity11-planet">
+
+                    <label for="activity12-planet">
                         planeta
-                        <select name="pets" id="pet-select">
+                        <select name="activity12-planet">
                             <option value="tierra">tierra</option>
                             <option value="saturno">saturno</option>
                             <option value="marte">marte</option>
                         </select>
                     </label>
-                    <label for="activity11-satelite">
+
+                    <label for="activity12-satelite">
                         satelite
-                        <input id="activity12" name="activity12"required>
+                        <input id="activity12-satelite" name="activity12-satelite"required>
                     </label>
                 </div>
-                <button  type="submit" > agregar satelite </button>   
+                <button  type="submit"> agregar satelite </button>   
                 <small>   <?php  ejercicio12(); ?>   </small>
             </form>
         </article>
+
+        <!-- ejecicio 13-->
+        <article>
+            <form method="POST">
+                <div class="grid">
+                    <label for="activity13">
+                        revierte el orden de los planetas
+                        <input type="submit" id="activity13" name="activity13" value="revierte" required>
+                    </label>
+                </div>
+                <small>   <?php  ejercicio13(); ?>   </small>
+            </form>
+        </article>
+
+
+
+
+
+
+
 
 
 
