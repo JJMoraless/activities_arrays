@@ -309,6 +309,30 @@ function ejercicio8()
         </article>
 
 
+
+        <!-- ejecicio 9 -->
+
+        <article>
+            <form method="POST">
+                <div class="grid">
+                    <label for="activity9">
+                        asesina a los alienigenas duplciados
+                        <input type="text" id="activity9" name="activity9" placeholder="planeta a buscar" required>
+                    </label>
+                </div>
+                
+                <button  type="submit" >  generar aleatorio </button>
+                <small>   <?php  ejercicio9(); ?>   </small>
+            </form>
+        </article>
+
+
+
+
+
+
+
+
         
 
 
