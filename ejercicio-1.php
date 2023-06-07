@@ -184,7 +184,7 @@ function ejercicio10()
     $sistemaSolar1 = ['Mercurio', 'Venus', 'Tierra', 'Marte', 'Júpiter'];
     $sistemaSolar2 = ['Venus', 'Tierra', 'Marte', 'Saturno', 'Urano'];
 
-    if (isset($_POST["activity10"])) {
+    if (isset($_POST["activity11"])) {
         $planetasComunes = array_intersect($sistemaSolar1, $sistemaSolar2);
         print_array($planetasComunes);
         return;
@@ -196,6 +196,29 @@ function ejercicio10()
 
 }
 
+
+
+/* -------------------------------------------------------------------------- */
+/*                                ejercicios 11                                */
+/* -------------------------------------------------------------------------- */
+
+
+function ejercicio11()
+{
+    $sistemaSolar1 = ['Mercurio', 'Venus', 'Tierra', 'Marte', 'Júpiter'];
+    $sistemaSolar2 = ['Venus', 'Tierra', 'Marte', 'Saturno', 'Urano'];
+
+    if (isset($_POST["activity11"])) {
+        $planetasComunes = array_diff($sistemaSolar1, $sistemaSolar2);
+        print_array($planetasComunes);
+        return;
+    }
+
+    print_array($sistemaSolar1);
+    echo "<br/>";
+    print_array($sistemaSolar2);
+
+}
 
 
 
@@ -401,6 +424,40 @@ function ejercicio10()
                 <small>   <?php  ejercicio10(); ?>   </small>
             </form>
         </article>
+
+
+          <!-- ejecicio 11-->
+
+          <article>
+            <form method="POST">
+                <div class="grid">
+                    <label for="activity11">
+                        planetas unicos en sisemas solares
+                        <input type="submit" id="activity11" name="activity11" value="bsucar comunes" required>
+                    </label>
+                </div>
+               
+                <small>   <?php  ejercicio11(); ?>   </small>
+            </form>
+        </article>
+
+           <!-- ejecicio 12-->
+
+         <article>
+            <form method="POST">
+                <div class="grid">
+                    <label for="activity11">
+                        planetas unicos en sisemas solares
+                        <input type="submit" id="activity11" name="activity11" value="bsucar comunes" required>
+                    </label>
+                </div>
+               
+                <small>   <?php  ejercicio11(); ?>   </small>
+            </form>
+        </article>
+
+
+        
     </body>
 </body>
 
