@@ -155,6 +155,24 @@ function ejercicio8()
 
 
 
+/* -------------------------------------------------------------------------- */
+/*                                ejercicios 9                                */
+/* -------------------------------------------------------------------------- */
+
+
+function ejercicio9()
+{
+    $aliens = ['fabiola', 'yureimis', 'margot', 'yureimis'];
+    if (isset($_POST["activity9"])) {
+        $aliens_unicos = array_unique($aliens);
+        print_array($aliens_unicos);
+        return;
+    }
+    print_array($aliens);
+}
+
+
+
 
 
 ?>
@@ -317,14 +335,31 @@ function ejercicio8()
                 <div class="grid">
                     <label for="activity9">
                         asesina a los alienigenas duplciados
-                        <input type="text" id="activity9" name="activity9" placeholder="planeta a buscar" required>
+                        <input type="submit" id="activity9" name="activity9" value="elimnar" required>
                     </label>
                 </div>
-                
-                <button  type="submit" >  generar aleatorio </button>
+               
                 <small>   <?php  ejercicio9(); ?>   </small>
             </form>
         </article>
+
+
+         <!-- ejecicio 10 -->
+
+         <article>
+            <form method="POST">
+                <div class="grid">
+                    <label for="activity9">
+                        asesina a los alienigenas duplciados
+                        <input type="submit" id="activity9" name="activity9" value="elimnar" required>
+                    </label>
+                </div>
+               
+                <small>   <?php  ejercicio9(); ?>   </small>
+            </form>
+        </article>
+
+
 
 
 
