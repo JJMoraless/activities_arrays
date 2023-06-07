@@ -107,13 +107,50 @@ function ejercicio5()
 
 function ejercicio6()
 {
-    global $planets;
+    $planets1 = ['mercurio', 'venus', 'tierra', 'marte', 'jupiter', 'saturno', 'urano', 'neptuno', 'pluton'];
     if (isset($_POST["activity6"])) {
-        $planet = array_search($_POST["activity6"], $planets);
+        $planet = array_search($_POST["activity6"], $planets1);
         echo $planet ? "si existe": "no existe" ;
         return;
     }
-    print_array($planets);
+    print_array($planets1);
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                ejercicios 7                                */
+/* -------------------------------------------------------------------------- */
+
+
+function ejercicio7()
+{
+    $tipos  = ['fuego', 'tierra', 'agua', 'aire', 'gaseoso', 'caliente'];
+    if (isset($_POST["activity7"])) {
+        $planet = array_search($_POST["activity7"], $tipos);
+        echo $planet ? "si existe": "no existe" ;
+        return;
+    }
+    print_array($tipos);
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                ejercicios 8                                */
+/* -------------------------------------------------------------------------- */
+
+
+function ejercicio8()
+{
+    $planets1 = ['mercurio', 'venus', 'tierra', 'marte', 'jupiter', 'saturno', 'urano', 'neptuno', 'pluton'];
+    if (isset($_POST["activity8"])) {
+        $index_rand = rand(0, count($planets1));
+        echo $planets1[$index_rand];
+        return;
+    }
+    print_array($planets1);
 }
 
 
@@ -227,11 +264,53 @@ function ejercicio6()
                         <input type="text" id="activity6" name="activity6" placeholder="planeta a buscar" required>
                     </label>
                 </div>
-                <small>    </small>
-                <input  name="activity6" type="submit"  value="calcula  la masa total: " ></input>
+                <small>  <?php  print_array($planets);  ?>    </small>
+                <button  type="submit" >  verificar si exite </button>
                 <small>   <?php  ejercicio6(); ?>   </small>
             </form>
         </article>
+
+
+
+        <!-- ejecicio 7 -->
+
+        <article>
+            <form method="POST">
+                <div class="grid">
+                    <label for="activity7">
+                        tipos de naves
+                        <input type="text" id="activity7" name="activity7" placeholder="planeta a buscar" required>
+                    </label>
+                </div>
+
+                <small> <?php   ?>  </small>
+                <button  type="submit" >  verificar si exite </button>
+                <small>   <?php  ejercicio7(); ?>   </small>
+            </form>
+        </article>
+
+
+
+        <!-- ejecicio 8 -->
+
+        <article>
+            <form method="POST">
+                <div class="grid">
+                    <label for="activity8">
+                        planeta aleatorio
+                        <input type="text" id="activity8" name="activity8" placeholder="planeta a buscar" required>
+                    </label>
+                </div>
+
+                <small> <?php   ?>  </small>
+                <button  type="submit" >  generar aleatorio </button>
+                <small>   <?php  ejercicio8     (); ?>   </small>
+            </form>
+        </article>
+
+
+        
+
 
 
         
